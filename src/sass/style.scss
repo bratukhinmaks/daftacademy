@@ -1,0 +1,73 @@
+@import "includes/base";
+
+@mixin position-central{
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+$blue:#EEF8F6;
+$blue-text:#A8C1BC;
+
+.bg-blue{
+  background-color: $blue;
+  margin-top: 100px;
+  padding: 125px 150px 0 150px !important;
+
+}
+img{
+  margin-bottom: 40px;
+}
+ul{
+  li {
+    display: inline;
+    padding-right: 10px;
+    color: $blue-text;
+    font-size: 0.8rem;
+    @media screen and (max-width: 768px){
+      display: list-item ;
+      list-style-type: none;
+      text-align: center;
+    }
+    &:hover{
+      color: #273650;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+p{
+  color: white;
+  font-size: 1.4rem;
+
+}
+.bg{
+  &__zinger{
+    background: url("https://github.com/daftcode/daftacademy-frontend_levelup-spring2019/blob/master/prace_domowe/lekcja_2/projekt_graficzny/assets/zinger.jpg?raw=true");
+    @include position-central;
+  }
+  &__bijou{
+    background: url("https://github.com/daftcode/daftacademy-frontend_levelup-spring2019/blob/master/prace_domowe/lekcja_2/projekt_graficzny/assets/bijou.jpg?raw=true");
+    @include position-central;
+  }
+  &__mojito{
+    background: url("https://github.com/daftcode/daftacademy-frontend_levelup-spring2019/blob/master/prace_domowe/lekcja_2/projekt_graficzny/assets/mojito.jpg?raw=true");
+    @include position-central;
+  }
+  &__negroni{
+    background: url("https://github.com/daftcode/daftacademy-frontend_levelup-spring2019/blob/master/prace_domowe/lekcja_2/projekt_graficzny/assets/negroni.jpg?raw=true");
+    @include position-central;
+  }
+  &__rattlesnake{
+    background: url("https://github.com/daftcode/daftacademy-frontend_levelup-spring2019/blob/master/prace_domowe/lekcja_2/projekt_graficzny/assets/rattlesnake.jpg?raw=true");
+    @include position-central;
+  }
+  &__eggnogg{
+    background: url("https://github.com/daftcode/daftacademy-frontend_levelup-spring2019/blob/master/prace_domowe/lekcja_2/projekt_graficzny/assets/eggnogg.jpg?raw=true");
+    @include position-central;
+  }
+}
