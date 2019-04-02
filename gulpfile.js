@@ -7,7 +7,8 @@ var gulp = require('gulp'),
   pug = require('gulp-pug'),
   prefix = require('gulp-autoprefixer'),
   sass = require('gulp-sass'),
-  browserSync = require('browser-sync');
+  browserSync = require('browser-sync'),
+  image = require('gulp-image');
 
 /*
  * Directories here
@@ -55,6 +56,15 @@ gulp.task('browser-sync', ['sass', 'pug'], function () {
   });
 });
 
+
+
+gulp.task('image', function () {
+  gulp.src('./src/images/*.png')
+      .pipe(image())
+      .pipe(gulp.dest('./public/images'));
+});
+
+gulp.task('default', ['image']);
 /**
  * Compile .scss files into public css directory With autoprefixer no
  * need for vendor prefixes then live reload the browser.
@@ -85,11 +95,11 @@ gulp.task('watch', function () {
 });
 
 // Build task compile sass and pug.
-gulp.task('build', ['sass', 'pug']);
+gulp.task('build', ['sass', 'pug','image']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync then watch
  * files for changes
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch','build']);
