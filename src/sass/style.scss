@@ -17,21 +17,20 @@ $blue-text:#A8C1BC;
 
 }
 img{
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  min-width: 200px;
 }
 ul{
   li {
     display: inline;
-    padding-right: 50px;
+    padding-right: 30px;
     color: $blue-text;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     @media screen and (max-width: 768px){
       display: list-item ;
       list-style-type: none;
       text-align: center;
-    }
-    &:nth-child(8){
-      padding-right: 0;
+      padding-right: 0px;
     }
     &:hover{
       color: #273650;
@@ -61,7 +60,16 @@ p{
 }
 
 .row {
-  max-height: 580px;
+  max-height: 540px;
   overflow-x: scroll;
 }
-
+.footer-font{
+  color:#A1A8B3 !important;
+  font-size: 0.9rem;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+.footer-link{
+  color:$blue-text;
+  padding-top: 25px;
+}
